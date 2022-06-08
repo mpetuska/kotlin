@@ -31,7 +31,7 @@ fun test(b : Boolean) {
 }
 
 // @TestKt.class:
-// 1 GETFIELD JFieldOwner.f : I
+// 2 GETFIELD JFieldOwner.f : I
 // 1 PUTFIELD JFieldOwner.f : I
-// 1 GETFIELD Mid.f : I
+// 0 GETFIELD Mid.f : I
 // 1 PUTFIELD Mid.f : I

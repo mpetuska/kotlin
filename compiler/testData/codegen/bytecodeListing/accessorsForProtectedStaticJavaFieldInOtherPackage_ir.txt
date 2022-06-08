@@ -29,7 +29,6 @@ public final class test/C {
     inner (anonymous) class test/C$g$1
     public method <init>(): void
     public synthetic final static method access$getX$p$s65(): java.lang.String
-    public synthetic final static method access$getX$p$s66(): java.lang.String
     public synthetic final static method access$h$s65(): java.lang.String
     public synthetic final static method access$h$s66(): java.lang.String
     public final @org.jetbrains.annotations.NotNull method f(): java.lang.String
