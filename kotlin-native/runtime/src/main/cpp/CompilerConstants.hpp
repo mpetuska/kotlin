@@ -62,6 +62,12 @@ enum class GCSchedulerType {
     kAggressive = 3,
 };
 
+// Must match AppStateTracking in AppStateTracking.kt
+enum class AppStateTracking {
+    kDisabled = 0,
+    kEnabled = 1,
+};
+
 DestroyRuntimeMode destroyRuntimeMode() noexcept;
 
 ALWAYS_INLINE inline bool shouldContainDebugInfo() noexcept {
@@ -92,6 +98,8 @@ ALWAYS_INLINE inline int getSourceInfo(void* addr, SourceInfo *result, int resul
 }
 
 compiler::GCSchedulerType getGCSchedulerType() noexcept;
+
+compiler::AppStateTracking appStateTracking() noexcept;
 
 #ifdef KONAN_ANDROID
 bool printToAndroidLogcat() noexcept;

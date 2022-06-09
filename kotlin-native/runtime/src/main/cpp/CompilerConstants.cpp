@@ -21,6 +21,8 @@ RUNTIME_WEAK const Kotlin_getSourceInfo_FunctionType Kotlin_getSourceInfo_Functi
 #ifdef KONAN_ANDROID
 RUNTIME_WEAK int32_t Kotlin_printToAndroidLogcat = 1;
 #endif
+// The compiler defaults to 1. But if overriding mechanism breaks, it's safer to keep this disabled.
+RUNTIME_WEAK int32_t Kotlin_appStateTracking = 0;
 
 ALWAYS_INLINE compiler::DestroyRuntimeMode compiler::destroyRuntimeMode() noexcept {
     return static_cast<compiler::DestroyRuntimeMode>(Kotlin_destroyRuntimeMode);
@@ -51,3 +53,7 @@ ALWAYS_INLINE bool compiler::printToAndroidLogcat() noexcept {
     return Kotlin_printToAndroidLogcat != 0;
 }
 #endif
+
+ALWAYS_INLINE compiler::AppStateTracking compiler::appStateTracking() noexcept {
+    return static_cast<compiler::AppStateTracking>(Kotlin_appStateTracking);
+}

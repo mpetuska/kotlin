@@ -31,6 +31,8 @@ object BinaryOptions : BinaryOptionRegistry() {
     val gcSchedulerType by option<GCSchedulerType>()
 
     val linkRuntime by option<RuntimeLinkageStrategyBinaryOption>()
+
+    val appStateTracking by option<AppStateTracking>()
 }
 
 open class BinaryOption<T : Any>(
